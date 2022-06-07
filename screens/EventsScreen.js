@@ -1,12 +1,35 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, View, Button } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { StackActions } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 
-function EventsHome() {
+function EventsScreen() {
+  const navigation = useNavigation();
+
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Settings!</Text>
+      <Text>Events first screen!</Text>
+      <Button
+        title="Go to second screen"
+        onPress={() => {
+          navigation.navigate("EventsSecondScreen"); //has to match the name in Stack Navigator below (not the component/function)
+        }}
+      />
+    </View>
+  );
+}
+
+function EventsSecondScreen() {
+  return (
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "hotpink",
+      }}
+    >
+      <Text>Events second screen!</Text>
     </View>
   );
 }
@@ -16,7 +39,8 @@ const Stack = createStackNavigator();
 export default function EventsStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="EventsHome" component={EventsHome} />
+      <Stack.Screen name="EventsHome" component={EventsScreen} />
+      <Stack.Screen name="EventsSecondScreen" component={EventsSecondScreen} />
     </Stack.Navigator>
   );
 }
