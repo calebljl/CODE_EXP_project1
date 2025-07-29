@@ -9,7 +9,7 @@ https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
 
 # Stage, commit, push
 
-`git status`
+`git status`  
 check what status files are currently in
 
 1. Local working directory (unmodified / modified)
@@ -17,14 +17,22 @@ check what status files are currently in
 3. Commit area
 4. Remote repo
 
-`git add .`
+`git add .`  
 working -> staging
+brings all files into staging
 
-`git commit -m "my commit message"`
+git add <file_name>
+`git add App.js`
+for specific files
+
+`git commit -m "my commit message"`  
 staging -> commit
 
-git push <remote_name> <branch_name>
-`git push origin main`
+`git commit -a -m "my commit message"`  
+to stage and commit in one go
+
+git push <remote_name> <branch_name>  
+`git push origin main`  
 commit -> remote
 
 - remote repo is almost always called origin
