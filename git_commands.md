@@ -1,16 +1,15 @@
 # Git Commands
 
-# Basics
-
 # Getting started
 
+Refer to the following book for learning more about git
 https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
 
-git clone https://github.com/calebljl/CODE_EXP_project1.git
+`git clone https://github.com/calebljl/CODE_EXP_project1.git`
 
 # Stage, commit, push
 
-git status
+`git status`
 check what status files are currently in
 
 1. Local working directory (unmodified / modified)
@@ -18,14 +17,14 @@ check what status files are currently in
 3. Commit area
 4. Remote repo
 
-git add .
+`git add .`
 working -> staging
 
-git commit -m "my commit message"
+`git commit -m "my commit message"`
 staging -> commit
 
 git push <remote_name> <branch_name>
-git push origin main
+`git push origin main`
 commit -> remote
 
 - remote repo is almost always called origin
