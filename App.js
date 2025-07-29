@@ -29,8 +29,8 @@ export default function App() {
             // You can return any component that you like here!
             return <FontAwesome name={iconName} size={size} color={color} />;
           },
-          tabBarActiveTintColor: "blue",
-          tabBarInactiveTintColor: "green",
+          tabBarActiveTintColor: "green",
+          tabBarInactiveTintColor: "blue",
         })}
       >
         <Tab.Screen name="Home" component={HomeScreen} />
