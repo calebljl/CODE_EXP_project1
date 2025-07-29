@@ -53,6 +53,12 @@ show status of remotes
 
 # Branching
 
+`git branch`
+view all branches
+
+- `git branch -v` see most recent commit
+- `git branch --merged` see which branches already merged into the CURRENT branch you're on
+
 git branch <new_branch_name>  
 `git branch testing`  
 create a new branch
@@ -73,6 +79,10 @@ type `wq` to exit graph
 
 `git merge hotfix`
 simple "fast-foward" merge back into main branch
+
+- \*IMPT: BEFORE RUNNING THIS COMMAND, need to `git switch main` to return to main branch first
+- resolve merge conflicts in VSC: either accept current, accept incoming, both, or edit the code again to compromise between the two
+- AFTER RESOLVING CONFLICTS: `git commit -m "merge conflict resolved"` and to finish the merge
 
 `git branch -d hotfix`
 delete branch if no longer needed
