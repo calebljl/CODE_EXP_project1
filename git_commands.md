@@ -58,6 +58,7 @@ view all branches
 
 - `git branch -v` see most recent commit
 - `git branch --merged` see which branches already merged into the CURRENT branch you're on
+- before deleting a branch, `$ git branch --no-merged main` check that it has been merged into main already
 
 git branch <new_branch_name>  
 `git branch testing`  
