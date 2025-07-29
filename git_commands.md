@@ -43,8 +43,10 @@ stage all files & commit in one command
 # Branching
 
 `git branch`
-view all branches, current branch has an asterisk /\* next to it
+view all branches
 
+- current branch has an asterisk /\* next to it
+- first branch auto-created is called main
 - `git branch -v` see most recent commit
 - `git branch --merged` see which branches already merged into the CURRENT branch you're on
 - before deleting a branch, `$ git branch --no-merged main` check that it has been merged into main already
@@ -53,10 +55,14 @@ git branch <new_branch_name>
 `git branch testing`  
 create a new branch
 
+- before creating new branch, save, add, commit changes to current branch
+- IF NEW BRANCH CREATED WITH EXISTING CHANGES, they will be associated with that new branch only (and will not be in the working directory of the parent branch anymore)
+
 `git switch testing`  
-switch to that branch  
-alternative: `git checkout testing` but `switch` is recommended  
-must commit / stash all changes before you're allowed to switch to diff branch
+switch to that branch
+
+- alternative: `git checkout testing` but `switch` is recommended
+- must commit / stash all changes before you're allowed to switch to diff branch
 
 `git checkout -b testing`  
 to create new branch and switch to it at the same time
@@ -87,7 +93,14 @@ git push <remote_name> <branch_name>
 commit -> remote
 
 - if branch not specified, will git push to the current branch
-- first branch is called main
+- DONT NEED TO PUSH EVERYTIME you commit
+- CAN ALSO CREATE TEMP BRANCHES that only exist in local repo, and then delete after a couple of hours once merged into another parent branch
 
-`git fetch origin`
-to fetch from remote repo
+`git fetch origin`  
+update local repo aka commit area
+
+`git pull`  
+update local repo (`git fetch`) & merges into working directory (`git merge`)
+
+`git branch -u origin/testing`  
+to link a local branch to remote branch
