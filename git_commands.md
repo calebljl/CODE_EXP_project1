@@ -2,7 +2,7 @@
 
 # Getting started
 
-Refer to the following book for learning more about git
+Refer to the following book for learning more about git  
 https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
 
 `git clone https://github.com/calebljl/CODE_EXP_project1.git`
@@ -62,12 +62,17 @@ switch to that branch
 alternative: `git checkout testing` but `switch` is recommended  
 must commit / stash all changes before you're allowed to switch to diff branch
 
-`git checkout -b iss53`  
+`git checkout -b testing`  
 to create new branch and switch to it at the same time
 
 ![alt text](branch.png)
 
-`git log --oneline --decorate --graph --all`
-graph of branching
+`git log --oneline --decorate --graph --all`  
+graph of branching  
+type `wq` to exit graph
 
-- type `wq` to exit graph
+`git merge hotfix`
+simple "fast-foward" merge back into main branch
+
+`git branch -d hotfix`
+delete branch if no longer needed
