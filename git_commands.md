@@ -1,4 +1,4 @@
-# Git Commands
+### Git Commands
 
 # Getting started
 
@@ -67,7 +67,8 @@ switch to that branch
 `git checkout -b testing`  
 to create new branch and switch to it at the same time
 
-![alt text](branch.png)
+![Git branching diagram](branch.png)
+_Git Branching and pointers_
 
 `git log --oneline --decorate --graph --all`  
 graph of branching  
@@ -79,6 +80,9 @@ simple "fast-foward" merge back into main branch
 - \*IMPT: BEFORE RUNNING THIS COMMAND, need to `git switch main` to return to main branch first
 - resolve merge conflicts in VSC: either accept current, accept incoming, both, or edit the code again to compromise between the two
 - AFTER RESOLVING CONFLICTS: `git commit -m "merge conflict resolved"` and to finish the merge
+
+![alt text](merge.png)
+_Three-way merge_
 
 `git branch -d hotfix`
 delete branch if no longer needed
@@ -104,3 +108,22 @@ update local repo (`git fetch`) & merges into working directory (`git merge`)
 
 `git branch -u origin/testing`  
 to link a local branch to remote branch
+
+# Rebasing
+
+takes changes from topic branch and "replays" it onto base branch  
+same end result as merging, but linear history of changes instead of parallel (like merging)  
+`git checkout testing`  
+`git rebase main`
+
+![alt text](rebase1.png)
+![alt text](rebase2.png)
+
+git rebase <basebranch> <topicbranch> 
+`git rebase main testing`
+rebase without checking out or switching
+
+**WARNING**  
+**DO NOT** rebase commits that exist outside your local repository and that people may have based work on.
+
+see more here https://git-scm.com/book/en/v2/Git-Branching-Rebasing
