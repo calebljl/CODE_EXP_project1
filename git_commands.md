@@ -21,16 +21,24 @@ check what status files are currently in
 working -> staging
 brings all files into staging
 
+git add <file_name>
+`git add App.js`
+for specific files
+brings all files into staging
+
 git add <file_name>  
 `git add App.js`  
 for specific files
 
+`git commit -m "my commit message"`  
 `git commit -m "my commit message"`  
 staging -> commit
 
 `git commit -a -m "my commit message"`  
 stage all files & commit in one command
 
+git push <remote_name> <branch_name>  
+`git push origin main`  
 git push <remote_name> <branch_name>  
 `git push origin main`  
 commit -> remote
