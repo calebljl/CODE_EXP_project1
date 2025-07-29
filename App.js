@@ -30,7 +30,7 @@ export default function App() {
             return <FontAwesome name={iconName} size={size} color={color} />;
           },
           tabBarActiveTintColor: "red",
-          tabBarInactiveTintColor: "green",
+          tabBarInactiveTintColor: "blue",
         })}
       >
         <Tab.Screen name="Home" component={HomeScreen} />

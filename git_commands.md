@@ -9,7 +9,7 @@ https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
 
 # Stage, commit, push
 
-set username and email to be recorded in metadata of commits
+set username and email to be recorded in metadata of commits  
 `git config --global user.name caleb`
 `git config --global user.email caleb@example.com`
 
@@ -29,9 +29,9 @@ git add <file_name>
 `git add App.js`  
 for specific files
 
-git restore --staged <file>  
+git restore --staged <file_name>  
 `git restore --staged App.js`  
-remove from staging area, back to working directory
+remove from staging area, back to working directory  
 \*IMPT: `git restore` without staged tag will DELETE current changes in working directory
 
 `git commit -m "my commit message"`  
@@ -45,13 +45,27 @@ git push <remote_name> <branch_name>
 commit -> remote
 
 - remote repo is almost always called origin
-- first branch is called main
 - if branch not specified, will git push to the current branch
+- first branch is called main
 
 `git remote show origin`
 show status of remotes
 
 # Branching
+
+git branch <new_branch_name>  
+`git branch testing`  
+create a new branch
+
+`git switch testing`  
+switch to that branch  
+alternative: `git checkout testing` but `switch` is recommended  
+must commit / stash all changes before you're allowed to switch to diff branch
+
+`git checkout -b iss53`  
+to create new branch and switch to it at the same time
+
+![alt text](branch.png)
 
 `git log --oneline --decorate --graph --all`
 graph of branching
