@@ -40,21 +40,10 @@ staging -> commit
 `git commit -a -m "my commit message"`  
 stage all files & commit in one command
 
-git push <remote_name> <branch_name>  
-`git push origin main`  
-commit -> remote
-
-- remote repo is almost always called origin
-- if branch not specified, will git push to the current branch
-- first branch is called main
-
-`git remote show origin`
-show status of remotes
-
 # Branching
 
 `git branch`
-view all branches
+view all branches, current branch has an asterisk /\* next to it
 
 - `git branch -v` see most recent commit
 - `git branch --merged` see which branches already merged into the CURRENT branch you're on
@@ -87,3 +76,18 @@ simple "fast-foward" merge back into main branch
 
 `git branch -d hotfix`
 delete branch if no longer needed
+
+# Remote Repo & Remote Branches
+
+`git remote show origin`
+show status of remotes, remote repo is almost always called origin
+
+git push <remote_name> <branch_name>  
+`git push origin main`  
+commit -> remote
+
+- if branch not specified, will git push to the current branch
+- first branch is called main
+
+`git fetch origin`
+to fetch from remote repo
